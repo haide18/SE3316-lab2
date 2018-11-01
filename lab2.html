@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SE 3316 - Lab 2</title>
+	<meta charset="UTF-8">
+	<script type='text/javascript' src='script.js'></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body onload="customerInit()">
+	
+	<div id = "login">
+		<h3>Manager Login:</h3>
+		<input type="text" id = "username" placeholder="Username">
+		<input type="text" id = "password" placeholder="Password">
+		<button onClick="managerLogin()">Login</button>
+	</div>
+	
+	<div id = "loggedIn">
+		<h3>Manager Currently Logged In</h3>
+		<button onClick = "managerLogout()">Logout</button>
+	</div>
+	
+	<div id="customerShelf">
+		
+		<h1>Fruit Shelf</h1>
+		<label class="switch">
+			<input id = "languageCheck" onclick = "changeLanguage()" type="checkbox">
+			<span class="slider round"></span>
+		</label>
+		
+		<div>
+			<h3 id = "applesString">Apples</h3>
+			<p id = "applesPrice">Price: 1.00</p>
+			<p id = "applesTax">Tax: 0.13</p>
+			<p id = "applesQty">Qty Available:</p>
+			<p id = "applesBasket">Currently in Basket: </p>
+			<input type="text" id = "applesInput">
+			<button id = "apples" onClick = "addFruit(this.id)">+</button>
+			<button id = "apples" onClick = "subtractFruit(this.id)">-1</button>
+		</div>
+		
+		<div>
+			<h3 id = "orangesString">Oranges</h3>
+			<p id = "orangesPrice">Price: 1.00</p>
+			<p id = "orangesTax">Tax: 0.13</p>
+			<p id = "orangesQty">Qty Available:</p>
+			<p id = "orangesBasket">Currently in Basket: </p>
+			<input type="text" id = "orangesInput">
+			<button id = "oranges" onClick = "addFruit(this.id)">+</button>
+			<button id = "oranges" onClick = "subtractFruit(this.id)">-1</button>
+		</div>
+		
+		<div>
+			<h3 id = "peachesString">Peaches</h3>
+			<p id = "peachesPrice">Price: 1.00</p>
+			<p id = "peachesTax">Tax: 0.13</p>
+			<p id = "peachesQty">Qty Available:</p>
+			<p id = "peachesBasket">Currently in Basket: </p>
+			<input type="text" id = "peachesInput">
+			<button id = "peaches" onClick = "addFruit(this.id)">+</button>
+			<button id = "peaches" onClick = "subtractFruit(this.id)">-1</button>
+		</div>
+		
+		<h1>Basket</h1>
+		<div id = "basket">
+		</div>
+	
+	</div>
+	
+	<div id="managerShelf">
+		
+		<h1>Manager Shelf</h1>
+		<div>
+			<h3 id = "applesString">Apples</h3>
+			
+			<label id = "applesCurrentPrice">Current Price: 1.00
+				<input type="text" id = "applesPriceModify">
+			</label>
+			<br>
+			<label id = "applesCurrentTax">Current Tax: 1.00
+				<input type="text" id = "applesTaxModify">
+			</label>
+			<br>
+			<label id = "applesCurrentInventory">Current Inventory: 1.00
+				<input type="text" id = "applesInventoryModify">
+			</label>
+			
+			<br>
+			<button id = "apples" onClick = "changeInventory(this.id)">Modify</button>
+		</div>
+		
+		<div>
+			<h3 id = "orangesString">Oranges</h3>
+			
+			<label id = "orangesCurrentPrice">Current Price: 1.00
+				<input type="text" id = "orangesPriceModify">
+			</label>
+			<br>
+			<label id = "orangesCurrentTax">Current Tax: 1.00
+				<input type="text" id = "orangesTaxModify">
+			</label>
+			<br>
+			<label id = "orangesCurrentInventory">Current Inventory: 1.00
+				<input type="text" id = "orangesInventoryModify">
+			</label>
+			
+			<br>
+			<button id = "oranges" onClick = "changeInventory(this.id)">Modify</button>
+		</div>
+		
+		<div>
+			<h3 id = "peachesString">Peaches</h3>
+			
+			<label id = "peachesCurrentPrice">Current Price: 1.00
+				<input type="text" id = "peachesPriceModify">
+			</label>
+			<br>
+			<label id = "peachesCurrentTax">Current Tax: 1.00
+				<input type="text" id = "peachesTaxModify">
+			</label>
+			<br>
+			<label id = "peachesCurrentInventory">Current Inventory: 1.00
+				<input type="text" id = "peachesInventoryModify">
+			</label>
+			
+			<br>
+			<button id = "peaches" onClick = "changeInventory(this.id)">Modify</button>
+		</div>
+	
+	</div>
+
+	
+	
+</body>
+</html>
